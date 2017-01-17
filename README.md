@@ -4,6 +4,9 @@ Encoding with zxing (Qr code, PDF 417)
 
 Add library dependency
 
+First add encoding_zxing_lib in your project
+Then :
+
     compile project(path: ':encoding_zxing_lib')
     
 To generate encode of QrCode
