@@ -10,6 +10,10 @@ To generate encode of QrCode
 
 Example -1
 
+        EncodingZxing.encodeToQrCode(text, size);
+        ---------------------------------
+        EncodingZxing.encodeToQrCode("Encoding with zxing", 500));
+        ---------------------------------
         imageView.setImageBitmap(EncodingZxing.encodeToQrCode("Encoding with zxing", 500));
         
 Example -2
@@ -20,15 +24,18 @@ Example -2
                                  dotColor,
                                  backgroundColor);
     ---------------------------------
-
         EncodingZxing.encodeToQrCode("Encoding with zxing",
                                       400,
                                       400,
                                       Color.BLACK,
                                       Color.WHITE);
 
-        imageView.setImageBitmap(EncodingZxing.encodeToQrCode("Encoding with zxing", 500));
-
 To generate encode of PDF417
 
+Example -1
+
+        EncodingZxing.encodeToPDF417(text, size, dotColor, backgroundColor)
+        ---------------------------------
+        imageView.setImageBitmap(EncodingZxing.encodeToPDF417(text, size, dotColor, backgroundColor));
+        ---------------------------------
         imageView.setImageBitmap(EncodingZxing.encodeToPDF417("Encoding with zxing", 500, Color.BLACK, Color.WHITE));
