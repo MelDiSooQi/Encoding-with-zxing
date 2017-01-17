@@ -1,15 +1,15 @@
-# Encoding-with-zxing
+# Encoding-with-zxing Android
 Encoding with zxing (Qr code, PDF 417)
 
 
-Add library dependency
+#Add library dependency
 
 First add encoding_zxing_lib in your project
 Then :
 
     compile project(path: ':encoding_zxing_lib')
     
-To generate encode of QrCode
+#To generate encode of QrCode
 
 Example -1
 
@@ -33,7 +33,7 @@ Example -2
                                       Color.BLACK,
                                       Color.WHITE);
 
-To generate encode of PDF417
+#To generate encode of PDF417
 
 Example -1
 
