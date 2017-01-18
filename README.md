@@ -12,14 +12,10 @@ Encoding with zxing (Qr code, PDF 417)
 
 - [Berif](https://github.com/MelDiSooQi/Encoding-with-zxing) - Project logo. Clear description of what the project does. Build badges. Demo screenshot. Simple install and usage sections. Includes an examples section with common uses.
 
-Elements in beautiful READMEs include, but not limited to: images, screenshots, GIFs, text formatting, etc.
-
 ##Add library dependency
-
-First add encoding_zxing_lib in your project
-Then :
-
-    compile project(path: ':encoding_zxing_lib')
+### installation
+- First add encoding_zxing_lib in your project
+> compile project(path: ':encoding_zxing_lib')
     
 ##To generate encode of QrCode
 
