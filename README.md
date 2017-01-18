@@ -7,13 +7,8 @@ Encoding with zxing (Qr code, PDF 417)
 
 | 1D product | 1D industrial | 2D
 | ---------- | ------------- | --------------
-| UPC-A      | Code 39       | QR Code
-| UPC-E      | Code 93       | Data Matrix
-| EAN-8      | Code 128      | Aztec (beta)
-| EAN-13     | Codabar       | PDF 417 (beta)
-|            | ITF           |
-|            | RSS-14        |
-|            | RSS-Expanded  |
+|            |               | QR Code
+|            |               | PDF 417 (beta)
 
 - [Berif](https://github.com/MelDiSooQi/Encoding-with-zxing) - Project logo. Clear description of what the project does. Build badges. Demo screenshot. Simple install and usage sections. Includes an examples section with common uses.
 
