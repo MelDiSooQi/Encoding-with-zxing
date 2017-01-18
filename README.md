@@ -1,8 +1,6 @@
-# Encoding-with-zxing Android
-Encoding with zxing (Qr code, PDF 417)
-
 <img src="icon.png" align="right" />
-# Encoding-with-zxing Android [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/MelDiSooQi/Encoding-with-zxing)
+# Encoding-with-zxing Android [![Encoding-with-zxing](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/MelDiSooQi/Encoding-with-zxing)
+Encoding with zxing (Qr code, PDF 417)
 > A curated list of encoding with zxing README
 
 ## Supported Formats
