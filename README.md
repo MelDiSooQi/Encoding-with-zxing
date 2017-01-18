@@ -16,7 +16,7 @@ Encoding with zxing (Qr code, PDF 417)
 ### installation
 - First add encoding_zxing_lib in your project.
 
-- Second add thi line in (Project Settings) settings.gradle
+- Second add this line in (Project Settings) settings.gradle
 
 > include ':encoding_zxing_lib'
 
