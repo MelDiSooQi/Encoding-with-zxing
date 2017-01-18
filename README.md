@@ -1,5 +1,5 @@
 # Encoding-with-zxing Android
-Encoding with zxing (Qr code, PDF 417)
+Encoding with zxing (Qr code, PDF 417)[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 
 ##Add library dependency
