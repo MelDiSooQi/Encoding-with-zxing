@@ -14,7 +14,7 @@ Encoding with zxing (Qr code, PDF 417)
 
 ##Add library dependency
 ### installation
-- First add encoding_zxing_lib in your project.
+- First add encoding_zxing_lib in your project. Then Add this line in app gradle.build
 
 > compile project(path: ':encoding_zxing_lib')
     
@@ -36,11 +36,11 @@ Example -2
                                  dotColor,
                                  backgroundColor);
     ---------------------------------
-        EncodingZxing.encodeToQrCode("Encoding with zxing",
-                                      400,
-                                      400,
-                                      Color.BLACK,
-                                      Color.WHITE);
+    EncodingZxing.encodeToQrCode("Encoding with zxing",
+                                 400,
+                                 400,
+                                 Color.BLACK,
+                                 Color.WHITE);
 
 ##To generate encode of PDF417
 
