@@ -1,1 +1,0 @@
-include ':app', ':encoding_zxing_lib'
