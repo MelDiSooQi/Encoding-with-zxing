@@ -20,6 +20,11 @@ import com.pureix.encodinganddecodinglib.EncodingZxing;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static final int QR_CODE = 0;
+    private static final int PDF_417 = 1;
+
+    private int currentEncoding = 0;
+
     ImageView imageView;
 
     @Override
@@ -35,11 +40,25 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//              imageView.setImageBitmap(EncodingZxing
-//                      .encodeToQrCode("Encoding with zxing", 500));
-
-                imageView.setImageBitmap(EncodingZxing
-                        .encodeToPDF417("Encoding with zxing", 500, Color.BLACK, Color.WHITE));
+                switch (currentEncoding) {
+                    case QR_CODE:
+                    {
+                        imageView.setImageBitmap(EncodingZxing
+                                .encodeToQrCode("Encoding with zxing", 500));
+                        break;
+                    }
+                    case PDF_417:
+                    {
+                        imageView.setImageBitmap(EncodingZxing
+                                .encodeToPDF417("Encoding with zxing", 500, Color.BLACK, Color.WHITE));
+                        break;
+                    }
+                    default:
+                    {
+                        Snackbar.make(view, "Error", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                }
 
                 Snackbar.make(view, "Done", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
@@ -94,17 +113,13 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
+        if (id == R.id.navQrCode) {
+            currentEncoding = QR_CODE;
+        } else if (id == R.id.navPDF417) {
+            currentEncoding = PDF_417;
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
 
         }
 
