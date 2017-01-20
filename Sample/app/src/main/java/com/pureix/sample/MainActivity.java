@@ -20,10 +20,12 @@ import com.pureix.encodinganddecodinglib.EncodingZxing;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private static final int QR_CODE = 0;
-    private static final int PDF_417 = 1;
+    private static final int QR_CODE        = 0;
+    private static final int PDF_417        = 1;
+    private static final int DATA_MATRIX    = 2;
+    private static final int AZTEC          = 3;
 
-    private int currentEncoding = 0;
+    private int currentEncoding = 2;
 
     ImageView imageView;
 
@@ -48,6 +50,18 @@ public class MainActivity extends AppCompatActivity
                         break;
                     }
                     case PDF_417:
+                    {
+                        imageView.setImageBitmap(EncodingZxing
+                                .encodeToPDF417("Encoding with zxing", 500, Color.BLACK, Color.WHITE));
+                        break;
+                    }
+                    case DATA_MATRIX:
+                    {
+                        imageView.setImageBitmap(EncodingZxing
+                                .encodeToDataMatrix("Encoding with zxing", 26, 12));
+                        break;
+                    }
+                    case AZTEC:
                     {
                         imageView.setImageBitmap(EncodingZxing
                                 .encodeToPDF417("Encoding with zxing", 500, Color.BLACK, Color.WHITE));
@@ -117,10 +131,10 @@ public class MainActivity extends AppCompatActivity
             currentEncoding = QR_CODE;
         } else if (id == R.id.navPDF417) {
             currentEncoding = PDF_417;
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.navDataMatrix) {
+            currentEncoding = DATA_MATRIX;
         } else if (id == R.id.nav_manage) {
-
+            currentEncoding = AZTEC;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

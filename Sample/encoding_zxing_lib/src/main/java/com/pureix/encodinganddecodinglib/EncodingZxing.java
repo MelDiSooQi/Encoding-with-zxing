@@ -6,6 +6,7 @@ import android.graphics.Color;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.datamatrix.DataMatrixWriter;
 import com.google.zxing.pdf417.PDF417Writer;
 import com.google.zxing.qrcode.QRCodeWriter;
 
@@ -99,6 +100,22 @@ public class EncodingZxing
         } catch (WriterException ex) {
             ex.printStackTrace();
         }
+        Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
+        for (int x = 0; x < width; x++){
+            for (int y = 0; y < height; y++){
+                bmp.setPixel(x, y, matrix.get(x,y) ? Color.BLACK : Color.WHITE);
+            }
+        }
+        return bmp;
+    }
+
+    public static Bitmap encodeToDataMatrix(String text, int width, int height){
+
+        DataMatrixWriter writer = new DataMatrixWriter();
+        BitMatrix matrix = null;
+
+        matrix = writer.encode(text, BarcodeFormat.DATA_MATRIX, width, height);
+
         Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565);
         for (int x = 0; x < width; x++){
             for (int y = 0; y < height; y++){

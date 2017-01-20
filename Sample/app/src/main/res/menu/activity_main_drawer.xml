@@ -11,9 +11,9 @@
             android:icon="@android:drawable/ic_dialog_dialer"
             android:title="PDF 417" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/navDataMatrix"
             android:icon="@android:drawable/ic_dialog_dialer"
-            android:title="Slideshow" />
+            android:title="Data Matrix" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@android:drawable/ic_dialog_dialer"
